@@ -2,11 +2,11 @@
 const canvas = document.getElementById('game');
 const context = canvas.getContext('2d');
 const grid = 15;
-const paddleHeight = grid * 5; // 80
+const paddleHeight = grid * 8; // 80
 const maxPaddleY = canvas.height - grid - paddleHeight;
 
 var paddleSpeed = 6;
-var ballSpeed = 5;
+var ballSpeed = 2;
 
 const leftPaddle = {
   // start in the middle of the game on the left side
@@ -149,6 +149,8 @@ document.addEventListener('keydown', function(e) {
     rightPaddle.dy = paddleSpeed;
   }
 
+
+  // z , x
   // w key
   if (e.which === 87) {
     leftPaddle.dy = -paddleSpeed;
